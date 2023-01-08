@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true,
       "unique": true,
       "minLength": 3
     },
-    "CoverImage": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -26,26 +26,11 @@
         "images"
       ]
     },
-    "Content": {
+    "content": {
       "type": "richtext",
       "required": true
     },
-    "PostSeo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.seo-information"
-    },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title",
-      "required": true
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
-    },
-    "Author": {
+    "author": {
       "type": "string",
       "required": true
     }
